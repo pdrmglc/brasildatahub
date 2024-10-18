@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles2.css') }}">
+    <script src="{{ url_for('static', filename='javascript/script.js') }}" defer></script>
+    <title>DengueDB</title>
+</head>
+
+<body>
+    <div class="footer">
+        <a href="/dic" download class="download-button">Baixar Dicionário</a>
+    </div>
+
+    <div class="form-container">
+        <form action="/get_data" method="post">
+            <img class="logo" src="{{ url_for('static', filename='images/ibge.png') }}" alt="Minha Imagem">
+            
+            <label for="ano_inicial">Ano Inicial:</label>
+            <select id="ano_inicial" name="ano_inicial">
+                <option value="2010" selected>2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+            </select>
+
+            <label for="ano_final">Ano Final:</label>
+            <select id="ano_final" name="ano_final">
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021" selected>2021</option>
+            </select>
+
+            <label for="contexto">Categoria:</label>
+            <select id="contexto" name="contexto">
+                <option value="PIB">PIB</option>
+                <option value="População">População</option>
+            </select>
+
+            <label for="formato">Formato:</label>
+            <select id="formato" name="formato">
+                <option value="csv">CSV</option>
+                <option value="json">JSON</option>
+            </select>
+
+            <input type="submit" value="Solicitar Dados">
+        </form>
+
+        <form action="/get_data" method="post">
+            <img class="logo" src="{{ url_for('static', filename='images/inmet.png') }}" alt="Minha Imagem">
+            
+            <label for="ano_inicial">Ano Inicial:</label>
+            <select id="ano_inicial" name="ano_inicial">
+                <option value="2010" selected>2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+            </select>
+
+            <label for="ano_final">Ano Final:</label>
+            <select id="ano_final" name="ano_final">
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021" selected>2021</option>
+            </select>
+
+            <div class = "teste">
+            <label for="contexto">Categoria:</label>
+            <select id="contexto" name="contexto">
+                <option value="inmet" selected>Inmet</option>
+            </select>
+            </div>
+
+            <label for="formato">Formato:</label>
+            <select id="formato" name="formato">
+                <option value="csv">CSV</option>
+                <option value="json">JSON</option>
+            </select>
+
+            <input type="submit" value="Solicitar Dados">
+        </form>
+
+        <form action="/get_data" method="post">
+            <img class="logo" src="{{ url_for('static', filename='images/sinan.png') }}" alt="Minha Imagem">
+            
+            <label for="ano_inicial">Ano Inicial:</label>
+            <select id="ano_inicial" name="ano_inicial">
+                <option value="2010" selected>2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+            </select>
+    
+            <label for="ano_final">Ano Final:</label>
+            <select id="ano_final" name="ano_final">
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021" selected>2021</option>
+            </select>
+    
+            <div class = "teste">
+                <label for="contexto">Contexto:</label>
+                <select id="contexto" name="contexto">
+                    <option value="sinan_dengue" selected></option>
+                </select>
+            </div>
+    
+            <label for="formato">Formato:</label>
+            <select id="formato" name="formato">
+                <option value="csv">CSV</option>
+                <option value="json">JSON</option>
+            </select>
+    
+            <input type="submit" value="Solicitar Dados">
+        </form>
+    
+        <form action="/get_data" method="post">
+            <img class="logo" src="{{ url_for('static', filename='images/sim.png') }}" alt="Minha Imagem">
+            
+            <label for="ano_inicial">Ano Inicial:</label>
+            <select id="ano_inicial" name="ano_inicial">
+                <option value="2010" selected >2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+            </select>
+    
+            <label for="ano_final">Ano Final:</label>
+            <select id="ano_final" name="ano_final">
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021" selected>2021</option>
+            </select>
+    
+            <div class = "teste">
+                <label for="contexto">Contexto:</label>
+                <select id="contexto" name="contexto">
+                    <option value="sim" selected></option>
+                </select>
+            </div>
+    
+            <label for="formato">Formato:</label>
+            <select id="formato" name="formato">
+                <option value="csv">CSV</option>
+                <option value="json">JSON</option>
+            </select>
+    
+            <input type="submit" value="Solicitar Dados">
+        </form>
+    
+        <form action="/get_data" method="post">
+            <img class="logo" src="{{ url_for('static', filename='images/biomaps.png') }}" alt="Minha Imagem">
+            
+            <label for="ano_inicial">Ano Inicial:</label>
+            <select id="ano_inicial" name="ano_inicial">
+                <option value="2010" selected>2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+            </select>
+    
+            <label for="ano_final">Ano Final:</label>
+            <select id="ano_final" name="ano_final">
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021" selected>2021</option>
+            </select>
+    
+            <div class = "teste">
+                <label for="contexto">Contexto:</label>
+                <select id="contexto" name="contexto">
+                    <option value="mapbiomas"></option>
+                </select>
+            </div>
+    
+            <label for="formato">Formato:</label>
+            <select id="formato" name="formato">
+                <option value="csv">CSV</option>
+                <option value="json">JSON</option>
+            </select>
+    
+            <input type="submit" value="Solicitar Dados">
+        </form>
+    
+        <form action="/get_data" method="post">
+            <img class="logo" src="{{ url_for('static', filename='images/cness.png') }}" alt="Minha Imagem">
+            
+            <label for="ano_inicial">Ano Inicial:</label>
+            <select id="ano_inicial" name="ano_inicial">
+                <option value="2010" selected>2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+            </select>
+        
+            <label for="ano_final">Ano Final:</label>
+            <select id="ano_final" name="ano_final">
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021" selected>2021</option>
+            </select>
+        
+            <label for="contexto">Categoria:</label>
+            <select id="contexto" name="contexto">
+                <option value="cnes_pf">Estabelecimentos Pessoal Física</option>
+                <option value="cnes_st">Estabelecimentos Pessoal Jurídica</option>
+            </select>
+            
+        
+            <label for="formato">Formato:</label>
+            <select id="formato" name="formato">
+                <option value="csv">CSV</option>
+                <option value="json">JSON</option>
+            </select>
+        
+            <input type="submit" value="Solicitar Dados">
+        </form>
+
+    </div>
+</body>
+
+</html>

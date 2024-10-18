@@ -1,0 +1,67 @@
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+form {
+    background-color: #6f7c6f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento interno entre os itens do formulário */
+    width: 300px;
+    margin-bottom: 30px; /* Espaço entre formulários */
+    margin-right: 10px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+img.logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 150px; /* Largura fixa */
+    height: 150px; /* Mantém a proporção original */
+    /* Se preferir uma altura fixa também, pode definir a altura como desejado:
+    height: 100px;
+    */
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+.teste{
+    visibility: hidden;
+}
+

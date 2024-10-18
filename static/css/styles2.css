@@ -1,0 +1,118 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Form container */
+.form-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os formulários quebrem para a próxima linha em telas menores */
+    justify-content: space-between; /* Garante espaçamento uniforme entre os formulários */
+    gap: 20px; /* Espaçamento entre os formulários */
+    padding: 20px;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    width: calc(33.333% - 40px); /* 33.33% de largura para 3 formulários por linha, subtraindo o espaçamento */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 40px); /* Garante que os formulários ocupem 1/3 da linha */
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 25px;
+    width: 200px;  /* Largura fixa */
+    height: 200px; /* Altura fixa */
+    object-fit:  contain; /* Garante que a imagem preencha o espaço sem distorção */
+    background: radial-gradient(circle, rgba(224, 240, 255, 1) 0%, rgba(173, 216, 230, 0.8) 50%, rgba(135, 206, 235, 0.7) 100%);
+    border-radius: 50px;
+}
+
+/* Label and Input Styling */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+select, input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Buttons */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Footer and Download Button */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1000px) {
+    form {
+        width: calc(50% - 40px); /* 2 formulários por linha em telas médias */
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 600px) {
+    form {
+        width: 100%; /* 1 formulário por linha em telas pequenas */
+        flex: 1 1 100%;
+    }
+    
+    .footer {
+        margin: 10px;
+    }
+}
+
+.teste {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    visibility: hidden; /* Torna o elemento invisível, mas ainda ocupa espaço */
+}

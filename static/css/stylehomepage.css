@@ -1,0 +1,206 @@
+/* Reseta estilos padrões para uniformidade entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do Cabeçalho */
+header {
+    background: linear-gradient(90deg, #1E3A8A, #60A5FA);
+    color: #f50000;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header .logo h1 {
+    font-size: 22px;
+    color: black;
+    display: flex;
+}
+
+/* Estilo para os links de navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaço entre o ícone e o texto */
+}
+
+nav ul li a i {
+    font-size: 18px; /* Tamanho dos ícones */
+}
+
+/* Estilo para hover nos links */
+nav ul li a:hover {
+    color: #ffdd57; /* Amarelo vivo ao passar o mouse */
+}
+
+/* Responsividade do cabeçalho para telas menores */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+/* Estilo do conteúdo principal (iframe do Power BI) */
+.iframe-container {
+    position: relative;
+    width: 90%; /* Largura ajustada conforme necessário */
+    max-width: 900px; /* Largura máxima */
+    margin: 40px 0 40px 20px;
+    height: 600px; /* Defina a altura que melhor se adapta à sua necessidade */
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* O iframe agora ocupa 100% da altura do container */
+    border: none;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #1f8a70;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para logos dos parceiros */
+footer .partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+footer .partners img {
+    width: 80px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+footer .partners img:hover {
+    transform: scale(1.1);
+}
+
+/* Ajuste responsivo para as logos de parceiros */
+@media (max-width: 600px) {
+    footer .partners img {
+        width: 60px;
+    }
+}
+
+/* Estilo para mobile */
+@media (max-width: 480px) {
+    header .logo h1 {
+        font-size: 20px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    footer .partners img {
+        width: 50px;
+    }
+}
+
+.logo img {
+    width: 140px;
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.cont {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Sessao de Bancos*/
+.icon-section {
+    display: flex;
+    flex-wrap: wrap; /* Permitir quebra de linha */
+    justify-content: space-between; /* Espaço igual entre os ícones */
+    align-items: flex-start; /* Alinhar os ícones ao topo */
+    padding: 20px;
+    gap: 10px; /* Diminuir a distância entre os ícones */
+    margin-top: 3%;
+  }
+  
+  .icon-link {
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s;
+    width: calc(50% - 10px); /* Ajustar largura para caber dois ícones por linha */
+  }
+  
+  .icon-link:hover {
+    transform: scale(1.1);
+  }
+  
+  .icon-image {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    background: radial-gradient(circle, rgba(224, 240, 255, 1) 0%, rgba(173, 216, 230, 0.8) 50%, rgba(135, 206, 235, 0.7) 100%);
+    border-radius: 50px;
+  }
+  
+  .icon-title {
+    text-align: center; /* Centraliza o texto */
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    color: #333; /* Cor do texto (você pode ajustar se quiser) */
+    margin-top: 5%;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylehomepage.css') }}">
+    <script src="{{ url_for('static', filename='javascript/script.js') }}" defer></script> 
+    <title>Projeto Dengue</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo_principal.png') }}" alt="Logo do Projeto">
+            <h1>Integração de Dados de Saúde Pública do Brasil: Última década</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="#"><i class="fas fa-database"></i> Obter Dados</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cont">
+        <div class="iframe-container">
+            <iframe title="SINAN Dengue" src="https://app.powerbi.com/reportEmbed?reportId=e409f799-85a5-4bd8-8877-4d5994c240d9&autoAuth=true&ctid=bc3721a6-8061-4e19-a3b4-31e2093e209a" allowFullScreen="true"></iframe>
+        </div>
+
+        <div class="dados-container">
+            <h1 class="icon-title"> 
+                <span class="icon-title-icon"><i class="fas fa-database"></i></span> 
+                Obter Dados
+            </h1>
+            <div class="icon-section">
+                <a href="{{ url_for('download_page') }}" class="icon-link">
+                    <img src="{{ url_for('static', filename='images/ibge.png') }}" alt="IBGE Icon" class="icon-image">
+                </a>
+                <a href="{{ url_for('download_page') }}" class="icon-link">
+                    <img src="{{ url_for('static', filename='images/inmet.png') }}" alt="INMET Icon" class="icon-image">
+                </a>
+                <a href="{{ url_for('download_page') }}" class="icon-link">
+                    <img src="{{ url_for('static', filename='images/cness.png') }}" alt="CNES Icon" class="icon-image">
+                </a>
+                <a href="{{ url_for('download_page') }}" class="icon-link">
+                    <img src="{{ url_for('static', filename='images/sim.png') }}" alt="SIM Icon" class="icon-image">
+                </a>
+                <a href="{{ url_for('download_page') }}" class="icon-link">
+                    <img src="{{ url_for('static', filename='images/sinan.png') }}" alt="SINAN Icon" class="icon-image">
+                </a>
+                <a href="{{ url_for('download_page') }}" class="icon-link">
+                    <img src="{{ url_for('static', filename='images/biomaps.png') }}" alt="BioMaps Icon" class="icon-image">
+                </a>
+            </div>                      
+        </div>           
+    </div>
+
+    <footer>
+        <p>Contatos: <a href="mailto:contato@exemplo.com">contato@exemplo.com</a></p>
+        <p>Telefone: (00) 1234-5678</p>
+        <p>&copy; 2024 Minha Empresa. Todos os direitos reservados.</p>
+        <p>Parceiros:</p>
+        <div class="partners">
+            <img src="marcafiocruz_horizontal_POSITIVA_24052024-scaled.jpg" alt="Logo do Parceiro 1">
+            <img src="logo_acme.png" alt="Logo do Parceiro 2">
+        </div>
+    </footer>
+</body>
+</html>
